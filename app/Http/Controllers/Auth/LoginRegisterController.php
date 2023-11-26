@@ -41,10 +41,6 @@ class LoginRegisterController extends Controller
             'password' => Hash::make($request->password)
         ]);
 
-        // $data = User::updateOrCreate(
-        //     ['name' => $request->name],
-        //     ['email' =>$request->email, 'password' =>Hash::make($request->password)]
-        // );
         $data = [
             'name' =>$request->name,
             'email'=>$request->email,

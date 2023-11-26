@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\GalleryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +28,21 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
    });
+
+Route::resource('gallery', GalleryController::class)->only([
+    'create', 'index', 'store', 'edit', 'update', 'destroy'
+])->names([
+    'create' => 'createPorto',
+    'index' => 'Porto',
+    'store' => 'storePorto',
+    // 'editporto/{id}' => 'editporto',
+    // 'updateporto/{id}' => 'updateporto',
+    // 'deleteporto/{id}' => 'deleteporto',
+]);
+// Route::get('/createporto', [GalleryController::class, 'create'])->name('createPorto');
+// Route::get('/pageporto', [GalleryController::class, 'index'])->name('Porto');
+// Route::post('/storeporto', [GalleryController::class, 'store'])->name('storePorto');
+Route::get('/editporto/{id}', [GalleryController::class, 'edit'])->name('editPorto');
+Route::patch('/updateporto/{id}', [GalleryController::class, 'update'])->name('updatePorto');
+Route::delete('/deleteporto/{id}', [GalleryController::class, 'destroy'])->name('deletePorto');
    

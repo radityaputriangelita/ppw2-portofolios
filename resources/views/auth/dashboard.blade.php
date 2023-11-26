@@ -493,7 +493,7 @@
 		</section><!--/.experience-->
 
   <!-- start section journal -->
-  <div id="portfolios" class="text-left paddsection">
+  {{-- <div id="portfolios" class="text-left paddsection">
 
     <div class="section-heading text-center">
         <h2>Portfolios</h2>
@@ -543,7 +543,7 @@
       </div>
     </div>
 
-  </div>
+  </div> --}}
   <!-- End section journal -->
 
 

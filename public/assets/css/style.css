@@ -117,7 +117,7 @@ input.col-md-4.btn.btn-primary.btn-login{
     font-size: 14px;
 }
 .href-login p, a{
-    font-size: 12px;
+    font-size: 16px;
 }
 .text-left {
     margin-top: 50px;
@@ -205,7 +205,9 @@ nav.navbar.bootsnav .navbar-toggle {
 }
 nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*.navbar-toggle */
-
+.nav-link {
+    font-size: 16px !important;
+}
 
 
 /*-------------------------------------
